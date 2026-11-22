@@ -1,22 +1,20 @@
+------------------------------------------------------------------------
+
+editor_options: markdown: wrap: 72 ---
+
 # Bike-share Arrival Rates
 
-This repository contains `bike_functions.R`, which has two functions for modeling
-bike-share requests with a non-homogeneous Poisson process (NHPP).
+This repository contains `bike_functions.R`, which has two functions for modeling bike-share requests with a non-homogeneous Poisson process (NHPP).
 
 ## Functions
 
-- `estimate_arrival_rates(data, window_start, window_end)`: takes trip data and an
-  observation window and returns the estimated hourly request rate for each
-  origin-destination pair. It adjusts observed departures for the fraction of time
-  the origin station had at least one bike available.
+- `estimate_arrival_rates(data, window_start, window_end)`: takes trip data and an observation window and returns the estimated hourly request rate for each origin-destination pair. It adjusts observed departures for the fraction of time the origin station had at least one bike available.
 
-- `simulate_arrivals(rates, start_time, end_time)`: takes the rate table from
-  `estimate_arrival_rates()` and simulates customer requests over
-  [start_time, end_time) using thinning.
+- `simulate_arrivals(rates, start_time, end_time)`: takes the rate table from `estimate_arrival_rates()` and simulates customer requests over [start_time, end_time) using thinning.
 
 ## Running an example
 
-```r
+``` r
 library(tidyverse)
 library(lubridate)
 source("bike_functions.R")
