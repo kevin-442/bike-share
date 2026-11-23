@@ -1,7 +1,3 @@
-------------------------------------------------------------------------
-
-editor_options: markdown: wrap: 72 ---
-
 # Bike-share Arrival Rates
 
 This repository contains `bike_functions.R`, which has two functions for modeling bike-share requests with a non-homogeneous Poisson process (NHPP).
